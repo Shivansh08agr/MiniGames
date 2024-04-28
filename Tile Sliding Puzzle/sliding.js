@@ -89,12 +89,14 @@ function moveTile(event) {
 }
 
 function isWon() {
-    for (let i = 0; i < cells.length-1; i++) {
-        const imgSrc = cells[i].querySelector("img") ? parseInt(cells[i].querySelector("img").dataset.no) : '';
+    for (let i = 0; i < cells.length; i++) {
+        const imgSrc = cells[i].querySelector("img") ? cells[i].querySelector("img").split("") : '';
+        const chk= imgSrc ? imgSrc.indexOf("p")-3: i+1 ;
         if (imgSrc !== i) {
             console.log("nope");
             return false;
         }
+        console.log(imgSrc);
     }
     return true;
 }
