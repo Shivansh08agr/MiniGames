@@ -29,6 +29,7 @@ function shuffleImages() {
         tiles[randomIndex] = tiles[currentIndex];
         tiles[currentIndex] = temp;
     }
+
     generateImages();
 }
 
@@ -90,13 +91,12 @@ function moveTile(event) {
 
 function isWon() {
     for (let i = 0; i < cells.length; i++) {
-        const imgSrc = cells[i].querySelector("img") ? cells[i].querySelector("img").split("") : '';
-        const chk= imgSrc ? imgSrc.indexOf("p")-3: i+1 ;
-        if (imgSrc !== i) {
+        const imgSrc = cells[i].querySelector("img") ? cells[i].querySelector("img").src : '';
+        const chk= imgSrc ? imgSrc[imgSrc.indexOf("png")-2]: i+1 ;
+        if (Number(chk) !== i+1) {
             console.log("nope");
             return false;
         }
-        console.log(imgSrc);
     }
     return true;
 }
