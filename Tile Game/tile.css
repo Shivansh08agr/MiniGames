@@ -1,0 +1,140 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100%;
+    color: red;
+    background-image: url(../Home-Page/img/bg.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1{
+    font-size: 5rem;
+    font-weight: 400;
+    text-align: center;
+    font-family: monospace;
+    padding-bottom: 2rem;
+}
+
+p{
+    font-size: 2.5rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.restart{
+    background-color: green;
+    border-radius: 10px;
+    padding: 0.5rem;
+    color: aliceblue;
+    font-size: 1.5rem;
+    font-family: monospace;
+}
+.actions{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+.grid-container{
+    display: grid;
+    grid-gap: 0.8rem;
+    max-width: 100vw;
+    justify-content: space-evenly;
+    margin: auto;
+    grid-template-columns: repeat(10, minmax(120px, 1fr));
+}
+.card{
+    height: 14rem;
+    width: 8rem;
+    min-width: 90px;
+    min-height: 180px;
+    padding: 2px;
+    background-color: gold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    transform-style: preserve-3d;
+    transition: all 0.3s ease-in-out;
+}
+.front-image{
+    height: 5rem;
+    width: 5rem;
+}
+
+.flipped{
+    transform: rotateY(180deg);
+}
+.card .back{
+    background-image: url(img/gold.jpg);
+    background-size: cover;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.front{
+    transform: rotateY(360deg);
+}
+@media screen and (max-width:1400px) {
+    .grid-container{
+        grid-template-columns: repeat(8, minmax(0px, 1fr));
+        justify-content: space-evenly;
+    }
+}
+@media screen and (max-width:1200px) {
+    .grid-container{
+        grid-template-columns: repeat(6, minmax(0px, 1fr));
+        justify-content: space-evenly;
+    }
+}
+@media screen and (max-width:900px) {
+    .grid-container{
+        grid-template-columns: repeat(5, 1fr);
+        justify-content: space-evenly;
+    }
+    .front-image{
+        height: 4rem;
+        width: 4rem;
+    }
+}
+@media screen and (max-width:600px) {
+    .grid-container{
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: space-evenly;
+    }
+    .front-image{
+        height: 3rem;
+        width: 3rem;
+    }
+}
+@media screen and (max-width:500px) {
+    .grid-container{
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-evenly;
+    }
+    .front-image{
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+    .card{
+        height: 12rem;
+        width: 6.5rem;
+    }
+    h1{
+        font-size: 2.8rem;
+    }
+    p{
+        font-size: 1.5rem;
+    }
+    .restart{
+        font-size: 0.8rem;
+    }
+}

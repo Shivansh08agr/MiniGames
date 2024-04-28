@@ -1,0 +1,42 @@
+[
+    {
+        "image": "../Tile Game/img/chili.png",
+        "name": "chili"
+    },
+    {
+        "image": "../Tile Game/img/bananas.png",
+        "name": "banana"
+    },
+    {
+        "image": "../Tile Game/img/grapes.png",
+        "name": "grapes"
+    },
+    {
+        "image": "../Tile Game/img/lemon.png",
+        "name": "lemon"
+    },
+    {
+        "image": "../Tile Game/img/orange.png",
+        "name": "orange"
+    },
+    {
+        "image": "../Tile Game/img/pineapple.png",
+        "name": "pineapple"
+    },
+    {
+        "image": "../Tile Game/img/strawberry.png",
+        "name": "strawberry"
+    },
+    {
+        "image": "../Tile Game/img/tomato.png",
+        "name": "tomato"
+    },
+    {
+        "image": "../Tile Game/img/watermelon.png",
+        "name": "watermelon"
+    },
+    {
+        "image": "../Tile Game/img/cherries.png",
+        "name": "cherries"
+    }
+]

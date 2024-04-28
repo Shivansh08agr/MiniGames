@@ -1,0 +1,79 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: url(../Home-Page/img/bg.jpg);
+}
+h1{
+    color: red;
+    text-decoration: dashed;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 8rem;
+    font-weight: 200;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.board {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, auto);
+  }
+.cell{
+    height: 8rem;
+    width: 8rem;
+    border:3px solid red;
+    cursor: pointer;
+}
+.cell img{
+    width: 100%;
+}
+.moves-word{
+    text-align: center;
+    font-size:3rem;
+    padding: 2rem;
+    color: red;
+}
+.winning-message {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .9);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 5rem;
+    flex-direction: column;
+  }
+  .winning-message .msg{
+    padding: 3rem;
+  }
+  .winning-message button {
+    font-size: 3rem;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: .5rem .5rem;
+    cursor: pointer;
+  }
+  
+  .winning-message button:hover {
+    background-color: black;
+    color: white;
+    border-color: white;
+  }
+  
+  .winning-message.show {
+    display: flex;
+  }
